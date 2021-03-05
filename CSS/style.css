@@ -166,3 +166,125 @@ footer {
 .social-link:hover {
   color: #ee786c;
 }
+
+
+/* Sign Up */
+#sign-up-content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 7vh;
+}
+.form-controller {
+  text-align: center;
+}
+.hr-form {
+  background: #fff;
+  width: 30vw;
+  opacity: 0.1;
+}
+.theme-form {
+  margin-top: 3vh !important;
+  width: 30vw;
+  margin: 0 auto;
+}
+#c-form {
+  transition: 0.5s ease-in-out;
+}
+.form-input-admin {
+  border-radius: 45px !important;
+}
+
+.signup-alert{
+  border-radius: 3em;
+  margin-bottom: 10px;
+  height: 25px;
+  line-height:30px;
+  padding:0px 15px;
+  padding-top: 4px;
+  background-color: #EE786C;
+  color:white;
+  border: none;
+  text-align: center;
+  font-size:0.8em;
+}
+
+#alert-btn{
+  padding:0px;
+  padding-right: 13px
+}
+
+/* Hide caret */
+.company-code {
+  border: none;
+  color: transparent !important;
+  display: inline-block;
+  font-size: 2em;
+  text-shadow: 0 0 0 #000;
+  width: 2em;
+}
+
+.form-button {
+  border: 1.5px solid #ee786c !important;
+  border-radius: 45px !important;
+  width: 100%;
+  background: #ee786c !important;
+  color: white !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px !important;
+}
+.form-button:hover {
+  border: 1.5px solid #ee786c !important;
+  background: transparent !important;
+  color: #ee786c !important;
+}
+.suc-right {
+  margin: 1vh 6vw;
+  margin-top: 3vh;
+  border-radius: 5px;
+  background: rgb(226, 226, 226);
+  padding-top: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.form-msg > h1 {
+  display: inline !important;
+  font-family: "Nunito", sans-serif;
+  color: #000;
+}
+.hello-icon {
+  height: 35px;
+}
+.form-msg > p {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  font-size: 13px;
+  margin-top: 1.5vh;
+}
+.sign-up-head {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  font-size: 30px;
+}
+.fc-btn {
+  margin: 5vh 0vw !important;
+}
+
+
+/* 
+COLORS
+Primary   : #1F1F26 ----- Blackish
+Secondary : #EE786C ----- Orangish
+Extra     : #FFFFFF ----- White
+
+
+FONTS
+Primary   : Nunito
+Secondary : Open-Sans
+Extra     : Reenie Beanie
+
+Syntax
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Reenie Beanie', cursive;
+*/
+
