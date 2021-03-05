@@ -23,6 +23,7 @@
       </div>
       <div class="theme-form">
         <form method="post" action="sign-up-emp.php" class="ui form">
+          <?php include('errors.php'); ?>
           <div class="sixteen wide field">
             <input onkeypress='validate(event);' class="form-input-admin company-code" type="text" name="company_code" placeholder="Company Code (Paste Only)" required>
           </div>

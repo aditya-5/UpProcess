@@ -13,3 +13,5 @@ const validate = (evt) => {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+$(".signup-alert").alert('close')  
