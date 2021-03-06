@@ -438,6 +438,25 @@ footer {
 .ra-left {
   margin-right: 2vw;
 }
+.modal-attendance {
+  background: transparent;
+  border: none;
+  margin-top: 3px;
+  font-family: "Nunito", sans-serif;
+  float: right;
+}
+.modal-attendance:hover {
+  background: transparent;
+  border: none;
+  margin-top: 3px;
+  font-family: "Nunito", sans-serif;
+  float: right;
+  color: #ee786c;
+}
+
+.at-btn {
+  font-family: "Nunito", sans-serif !important;
+}
 /* Tasks */
 /* .main-task-sec { */
 /* background: yellowgreen; */

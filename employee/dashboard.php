@@ -34,7 +34,7 @@
                                     }
                           ?>
                             <form method="post" action="dashboard.php" class="ui form delete">
-                                <button onclick="return checkPresent()" type="submit" name="mark_present" value='<?php echo $_SESSION["username"] ?>' id="delete" class="ui large icon button tt-btn <?php echo $user_att == "P" ? 'disabled' : ''?>">
+                                <button onclick="return checkPresent()" type="submit" name="mark_present" value='<?php echo $_SESSION["username"] ?>' id="delete" class="ui large icon button tt-btn at-btn <?php echo $user_att == "P" ? 'disabled' : ''?>">
                                       <?php echo $user_att == "P" ? 'Marked Present <i class="calendar check icon"></i>' : 'Mark Present <i class="calendar minus icon"></i>'?>
                                     
                                 </button>
@@ -42,7 +42,56 @@
                       </div>
                       <div class="recent_attendance">
                           <div class="ra-table">
-                              <h2>Your recent attendance</h2>
+                              <h2 class="d-inline">Your recent attendance</h2>
+                              <button type="button" class="modal-attendance" data-toggle="modal" data-target="#exampleModal">see more <i class="address book outline icon"></i></button>
+                               <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Attendance History</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" style="overflow-y:auto; height:70vh;">
+                                                <table class="ui basic stackable table at-dash">
+                                                    <thead>
+                                                        <tr>
+                                                        <th>Date</th>
+                                                        <th>Day</th>
+                                                        <th>Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php 
+                                                                date_default_timezone_set('Asia/Kolkata');
+                                                                $user_att = 'A';
+                                                                $username = $_SESSION['username'];
+                                                                $query_attendance = "SELECT * FROM `attendance` WHERE `username` = '$username'  ORDER BY `date`";
+                                                                $results_attendance = mysqli_query($db, $query_attendance);
+                                                                if($results_attendance->num_rows > 0){
+                                                                    while($row = $results_attendance->fetch_assoc()) { 
+                                                                            $date=date_create($row['date']);
+                                                                        ?>
+                                                                            <tr>
+                                                                                <td><?php echo date_format($date, 'j / M')?></td>
+                                                                                <td><?php echo date_format($date, 'l')?></td>
+                                                                                <td style="color:green">Present <i class="calendar check outline icon ml-1"></i></td>
+                                                                            </tr>
+                                                                            
+                                                                            <?php }
+                                                                }
+                                                            ?>
+                                                        </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="theme-button close-modal-btn" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                               <table class="ui basic stackable table at-dash">
                                    <thead>
                                        <tr>
@@ -73,7 +122,6 @@
                             ?>
                                 </tbody>
                             </table>
-                            
                           </div>
                           <div class="ra-left">
                                 <div class="ra-table">
