@@ -172,13 +172,13 @@
                    </div>
                    <div class="social-open-links">
                        <div class="so-link">
-                           <a href="#" target="_blank" rel="noopener noreferrer"><i class="facebook icon"></i> Facebook</a>
+                           <a class="fb-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="facebook icon"></i> Facebook</a>
                        </div>
-                       <div class="so-link">
-                           <a href="#" target="_blank" rel="noopener noreferrer"><i class="instagram icon"></i> Instagram</a>
+                       <div class="so-link insta-bg">
+                           <a class="insta-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="instagram icon"></i> Instagram</a>
                        </div>
-                       <div class="so-link">
-                           <a href="#" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> LinkedIn</a>
+                       <div class="so-link li-bg">
+                           <a class="li-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> LinkedIn</a>
                        </div>
                    </div>
                </div>
