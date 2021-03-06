@@ -461,11 +461,32 @@ footer {
   display: inline;
 }
 .social-open-links {
-  background: greenyellow;
+  /* background: greenyellow; */
+  padding: 1vh 5px;
 }
 .so-link {
-  background: red;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
   margin: 2vh 1vw;
+  padding: 2.5vh 1vw;
+  border-radius: 15px;
+  background: #fff;
+}
+.fb-bg {
+  color: #3b5998;
+}
+.insta-bg {
+  color: #cd486b;
+}
+.li-bg {
+  color: #0e76a8;
+}
+/* .so-link > a {
+  color: #fff;
+} */
+.so-link > a > i {
+  margin-right: 3vw;
 }
 
 /* ============ RESPONSIVE ============= */
