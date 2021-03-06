@@ -372,7 +372,7 @@ footer {
 }
 .section-one {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 80% 20%;
 }
 .msg-section {
   margin: 1vh 2vw;
@@ -394,11 +394,54 @@ footer {
   color: #ee786c;
   /* background: green; */
 }
-
-/* Tasks */
-.main-task-sec {
-  /* background: yellowgreen; */
+.attendance {
+  margin-left: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
+.attendance > h2 {
+  font-family: "Nunito", sans-serif;
+  display: inline;
+  font-size: 20px;
+}
+.attendance > form {
+  display: inline !important;
+  margin-left: 2vw;
+}
+.attendance > form > button {
+  display: inline !important;
+  margin-left: 2vw;
+  color: #000 !important;
+}
+.recent_attendance {
+  /* background: blue; */
+  /* height: 10vh; */
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 3.5vh;
+}
+.ra-table {
+  /* background: red; */
+  margin-top: 1vh;
+  margin-left: 2vw;
+}
+.ra-table > h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+.at-dash {
+  border-radius: 15px !important;
+  background: #fff !important;
+  margin-top: 5px !important;
+}
+.ra-left {
+  margin-right: 2vw;
+}
+/* Tasks */
+/* .main-task-sec { */
+/* background: yellowgreen; */
+/* } */
 .section-two {
   display: grid;
   grid-template-columns: 80% 20%;
@@ -446,7 +489,7 @@ footer {
 .tt-btn:hover {
   box-shadow: px px rgba(9, 9, 9, 0.4) !important;
 }
-.right-side-tasks {
+.right-side {
   margin: 1vh 2px;
   margin-bottom: 6vh;
   border-radius: 15px;
@@ -473,18 +516,18 @@ footer {
   border-radius: 15px;
   background: #fff;
 }
-.fb-bg {
+.so-link > a {
+  color: #1f1f26;
+}
+.fb-bg:hover {
   color: #3b5998;
 }
-.insta-bg {
+.insta-bg:hover {
   color: #cd486b;
 }
-.li-bg {
+.li-bg:hover {
   color: #0e76a8;
 }
-/* .so-link > a {
-  color: #fff;
-} */
 .so-link > a > i {
   margin-right: 3vw;
 }

@@ -6,7 +6,7 @@ error_reporting(0);
 $username = "";
 $company_code ="";
 $errors = array(); 
-
+$_SESSION['attendance'] = "";
 // connect to the user database
 $db = mysqli_connect('127.0.0.1', 'root', '','up_process');
 $db -> select_db('company');
@@ -165,8 +165,20 @@ if (isset($_POST['done_task'])) {
     $query= "UPDATE `tasks` SET  `sub_time`='$sub_time',`status`='$change_status' WHERE `id`= '$id'";
       mysqli_query($db, $query);
       header('location: tasks.php');
-     } 
+} 
 
+// Mark Present 
+if(isset($_POST['mark_present'])) 
+  {  
+    date_default_timezone_set('Asia/Kolkata'); 
+    $curr_time = date("G:i:s", time());
+    $today_date = Date('Y-m-d');
+    $username = mysqli_real_escape_string($db, $_POST['mark_present']);
+    $marked = "Present";
+    $query = "INSERT INTO `attendance`(`marked`, `username`, `date`, `time`) VALUES ('$marked','$username','$today_date','$curr_time')";
+    mysqli_query($db, $query);
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+  }
 // DELETE 
 if(isset($_POST['delete'])) 
   {    

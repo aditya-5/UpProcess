@@ -23,13 +23,30 @@
       </div>
     </div>
 </div>
+
 <?php 
 if (isset($_GET['logout'])) {
+    // Unachived tasks
+    date_default_timezone_set('Asia/Kolkata'); 
+    $curr_time = date("G:i:s", time());
+    $end_time = "10:15:00";
+    if ($curr_time > $end_time) {
+      $category = "admin";
+      $assigned_to = $_SESSION['username'];
+      $change_status = "unachived";
+      $sub_time = date("G:i:s", time());
+      $today_date = Date('Y-m-d');
+      $query= "UPDATE `tasks` SET  `sub_time`='$sub_time',`status`='$change_status' WHERE `assigned_to`= '$assigned_to' AND `status` = 'pending' AND `task_date` = '$today_date'";
+        mysqli_query($db, $query);
+    }
+
+
     session_destroy();
     unset($_SESSION['username']);
     unset($_SESSION['name']);
     unset($_SESSION['company-code']);
     unset($_SESSION['designation']);
+    unset($_SESSION['attendance']);
     header("location: index.php?");
 }
 ?>

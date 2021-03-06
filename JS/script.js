@@ -17,7 +17,7 @@ $(function () {
 // Active sidebar link 
 function setNavigation() {
   var path = window.location.pathname;
-    path = path.replace(/\/upProcess\/employee\//, "");
+    path = path.replace(/\/upProcess_v0\/employee\//, "");
     // path = path.replace(/\//, "");
     console.log(path);
   path = decodeURIComponent(path);

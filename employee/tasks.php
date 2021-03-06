@@ -42,6 +42,7 @@
                              <a class="<?php echo $_GET['category']=="admin" ? "theme-button" : "theme-outline-button" ;?> filter-btn" href="tasks.php?category=admin&status=<?php echo $status?>">
                                  Company Assd.
                              </a>
+                             <span class="border-right py-3 mr-3"></span>
                              <a class="<?php echo $_GET['status']=="submitted" ? "theme-button" : "theme-outline-button" ;?> filter-btn" href="tasks.php?category=<?php echo $category?>&status=submitted">
                                  Submitted
                              </a>
@@ -100,9 +101,10 @@
                                     $query_tasks_lh = " ORDER BY assigned_time DESC ";
                                     $query_tasks = $query_tasks_fh.$query_tasks_ch.$query_tasks_sh.$query_tasks_lh;
                                     $results_tasks = mysqli_query($db, $query_tasks);
-                                    $done_status ="<i class='circle small green icon ml-1'></i>";
-                                    $sub_status ="<i class='circle small yellow icon ml-1'></i>";
-                                    $pen_status ="<i class='circle small blue icon ml-1'></i>";
+                                    // $done_status ="<i class='circle small green icon ml-1'></i>";
+                                    $done_status ="<i class='star small green icon ml-1'></i>";
+                                    $sub_status ="<i class='star small yellow icon ml-1'></i>";
+                                    $pen_status ="<i class='star small blue icon ml-1'></i>";
                                     $un_status ="<i class='circle small red icon ml-1'></i>";
                                     if ($results_tasks->num_rows > 0) {
                                         while($row = $results_tasks->fetch_assoc()) {
@@ -121,6 +123,8 @@
                                                       } 
                                                       else if ($row['status']=="submitted") {
                                                         echo ucfirst($row['status'])." ".$sub_status; 
+                                                      } else if ($row['status']=="unachived") {
+                                                        echo ucfirst($row['status'])." ".$un_status; 
                                                       } else {
                                                         echo ucfirst($row['status'])." ".$pen_status;
                                                       }
