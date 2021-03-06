@@ -13,4 +13,7 @@
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <!-- Script JS -->
 <script src="../JS/script.js"></script>
+<!-- FontAwesome for tabs -->
+<script src="https://kit.fontawesome.com/21dbb8851c.js" crossorigin="anonymous"></script>
+
 </html>
