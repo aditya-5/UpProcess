@@ -81,26 +81,42 @@
                                     <table class="ui basic stackable table at-dash">
                                         <thead>
                                             <tr>
-                                            <th>Due <i class="clock outline icon"></i></th>
-                                            <th>Task Name</th>
-                                            <th>Task Status</th>
+                                                <th>Due <i class="clock outline icon"></i></th>
+                                                <th>Task Name</th>
+                                                <th>Task Status <i class='circle mini blue icon'></i><i class='circle mini yellow icon'></i><i class='circle mini green icon'></i><i class='circle mini red icon'></i></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                 <?php 
+                                        $done_status ="<i class='star small green icon ml-1'></i>";
+                                        $sub_status ="<i class='star small yellow icon ml-1'></i>";
+                                        $pen_status ="<i class='star small blue icon ml-1'></i>";
+                                        $un_status ="<i class='circle small red icon ml-1'></i>";
                                         date_default_timezone_set('Asia/Kolkata');
-                                        $user_att = 'A';
                                         $username = $_SESSION['username'];
-                                        $query_attendance = "SELECT * FROM `attendance` WHERE `username` = '$username'  ORDER BY `date` DESC LIMIT 4";
-                                        $results_attendance = mysqli_query($db, $query_attendance);
-                                        if($results_attendance->num_rows > 0){
-                                            while($row = $results_attendance->fetch_assoc()) { 
-                                                    $date=date_create($row['date']);
+                                        $query_tasks = "SELECT * FROM `tasks` WHERE `assigned_to` = '$username'  ORDER BY `id` DESC LIMIT 4";
+                                        $results_tasks = mysqli_query($db, $query_tasks);
+                                        if($results_tasks->num_rows > 0){
+                                            while($row = $results_tasks->fetch_assoc()) { 
                                                 ?>
                                                     <tr>
-                                                        <td><?php echo date_format($date, 'j / M')?></td>
-                                                        <td><?php echo date_format($date, 'l')?></td>
-                                                        <td style="color:green">Present <i class="calendar check outline icon ml-1"></i></td>
+                                                        <td><?php echo date('g:i A', strtotime($row['due_time']));?></td>
+                                                        <td><?php echo $row['name']?></td>
+                                                        <td>
+                                                            <?php
+                                                                if ($row['status']=="done") {
+                                                                    echo ucfirst($row['status'])." ".$done_status; 
+                                                                } 
+                                                                else if ($row['status']=="submitted") {
+                                                                    echo ucfirst($row['status'])." ".$sub_status; 
+                                                                } else if ($row['status']=="unachived") {
+                                                                    echo ucfirst($row['status'])." ".$un_status; 
+                                                                } else {
+                                                                    echo ucfirst($row['status'])." ".$pen_status;
+                                                                }
+                                                                
+                                                                ?>
+                                                        </td>
                                                     </tr>
                                                     
                                                     <?php }

@@ -140,7 +140,7 @@ if (isset($_POST['task_add'])) {
     $task_name = mysqli_real_escape_string($db, $_POST['task_name']);
     $description = mysqli_real_escape_string($db, $_POST['description']);
     $assigned_time = date("G:i:s", time());
-    $due_time = mysqli_real_escape_string($db, $_POST['due_date_and_time']);
+    $due_time = mysqli_real_escape_string($db, $_POST['due_time']);
     $sub_time = "";
     $category = $_SESSION['designation'];
     $assigned_to = $_SESSION['designation'] == "admin" ? $_POST['assigned_to'] : $_SESSION['username'];
