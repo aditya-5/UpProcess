@@ -87,7 +87,7 @@
                                                 </table>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="theme-button close-modal-btn" data-dismiss="modal">Close</button>
+                                                <button type="button" class="theme-buttonclose-modal-btn" data-dismiss="modal">Close</button>
                                             </div>
                                         </div>
                                     </div>
@@ -188,13 +188,13 @@
                    </div>
                    <div class="social-open-links">
                        <div class="so-link">
-                           <a class="fb-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="facebook icon"></i> Facebook</a>
+                           <a class="fb-bg" href="<?php echo $_SESSION['fb_link'] ?>" target="_blank" rel="noopener noreferrer"><i class="facebook icon"></i> Facebook</a>
                        </div>
                        <div class="so-link insta-bg">
-                           <a class="insta-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="instagram icon"></i> Instagram</a>
+                           <a class="insta-bg" href="<?php echo $_SESSION['insta_link'] ?>" target="_blank" rel="noopener noreferrer"><i class="instagram icon"></i> Instagram</a>
                        </div>
                        <div class="so-link li-bg">
-                           <a class="li-bg" href="#" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> LinkedIn</a>
+                           <a class="li-bg" href="<?php echo $_SESSION['li_link'] ?>" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> LinkedIn</a>
                        </div>
                    </div>
                </div>

@@ -113,6 +113,9 @@ if (isset($_POST['signin_user'])) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['company_code'] =  $row['company_code'];
             $_SESSION['designation'] = $row['designation'];
+            $_SESSION['fb_link'] = $row['fb_link'];
+            $_SESSION['insta_link'] = $row['insta_link'];
+            $_SESSION['li_link'] = $row['li_link'];
 
           header('location: employee/dashboard.php');
         }else {
@@ -123,6 +126,9 @@ if (isset($_POST['signin_user'])) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['company_code'] =  $row['company_code'];
             $_SESSION['designation'] = $row['designation'];
+            $_SESSION['fb_link'] = $row['fb_link'];
+            $_SESSION['insta_link'] = $row['insta_link'];
+            $_SESSION['li_link'] = $row['li_link'];
 
             header('location: company/dashboard.php');
           }else {
@@ -133,7 +139,6 @@ if (isset($_POST['signin_user'])) {
   }
 
   // Add task emp
-  // REGISTER EMPLOYEE
 if (isset($_POST['task_add'])) {
     date_default_timezone_set('Asia/Kolkata'); 
   // Receive all input values from the form
@@ -179,6 +184,35 @@ if(isset($_POST['mark_present']))
     mysqli_query($db, $query);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
+
+if (isset($_POST['update_profile'])) {
+  $username = $_SESSION['username'];
+  $name = mysqli_real_escape_string($db, $_POST['name']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+  $fb_link = mysqli_real_escape_string($db, $_POST['fb_link']);
+  $insta_link = mysqli_real_escape_string($db, $_POST['insta_link']);
+  $li_link = mysqli_real_escape_string($db, $_POST['li_link']);
+  $hash_pass = md5($password);
+ if($password == "") {
+
+   if ($_SESSION['designation'] == 'emp') {
+     $query= "UPDATE `employee` SET  `name`='$name', `fb_link`='$fb_link',`insta_link`='$insta_link',`li_link`='$li_link' WHERE `username`= '$username'";
+   } else {
+     $query= "UPDATE `company` SET  `name`='$name', `fb_link`='$fb_link', `insta_link`='$insta_link',`li_link`='$li_link' WHERE `username`= '$username'";
+   }
+   
+  } else {
+   if ($_SESSION['designation'] == 'emp') {
+     $query= "UPDATE `employee` SET  `name`='$name',`password`='$hash_pass', `fb_link`='$fb_link',`insta_link`='$insta_link',`li_link`='$li_link' WHERE `username`= '$username'";
+   } else {
+     $query= "UPDATE `company` SET  `name`='$name',`password`='$hash_pass', `fb_link`='$fb_link', `insta_link`='$insta_link',`li_link`='$li_link' WHERE `username`= '$username'";
+   }
+
+ }
+  echo $query;
+    mysqli_query($db, $query);
+    header('location: settings.php?'.$query);
+} 
 // DELETE 
 if(isset($_POST['delete'])) 
   {    

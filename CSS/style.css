@@ -373,6 +373,7 @@ footer {
 .section-one {
   display: grid;
   grid-template-columns: 80% 20%;
+  height: 90%;
 }
 .msg-section {
   margin: 1vh 2vw;
@@ -414,11 +415,11 @@ footer {
   color: #000 !important;
 }
 .recent_attendance {
-  /* background: blue; */
-  /* height: 10vh; */
   display: grid;
   grid-template-columns: 40% 60%;
   margin-top: 3.5vh;
+  height: fit-content;
+  padding-bottom: 5vh;
 }
 .ra-table {
   /* background: red; */
@@ -550,7 +551,30 @@ footer {
 .so-link > a > i {
   margin-right: 3vw;
 }
-
+/* Settings */
+.profile-card {
+  border-radius: 15px !important;
+  font-family: "Nunito", sans-serif;
+  background: url("../src/imgs/profile-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-title {
+  font-family: "Nunito", sans-serif !important;
+  margin-left: 1vw;
+  position: absolute;
+  margin-top: 2vh !important;
+}
+.card-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.profile-link-p {
+  color: #000;
+  font-weight: 600;
+  margin-left: 50vw;
+}
 /* ============ RESPONSIVE ============= */
 /* 
   320px — 480px: Mobile devices.

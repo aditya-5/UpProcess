@@ -8,7 +8,7 @@
         	
         	<!-- Alert for no tasks found -->
         	<div class="container">
-	        	<div class="alert alert-danger" style="border-radius: 30px; height:130px; text-align: center; font-size: 2em; padding-top: 35px; background-color: #EE786C; opacity: 50%;color: white; border: 1px solid #1F1F26" role="alert">
+	        	<div class="alert alert-danger" style="border-radius: 15px; height:130px; text-align: center; font-size: 2em; padding-top: 35px; background-color: #EE786C; opacity: 0.8;color: white; border: 1px solid #1F1F26" role="alert">
 					  Oops! Couldn't retrieve any tasks <br><br>
 					  Please add new tasks
 				</div>
