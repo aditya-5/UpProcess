@@ -14,4 +14,24 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+// Active sidebar link 
+function setNavigation() {
+  var path = window.location.pathname;
+    path = path.replace(/\/upProcess\/employee\//, "");
+    // path = path.replace(/\//, "");
+    console.log(path);
+  path = decodeURIComponent(path);
+  if (path == "") {
+    path = "index.php";
+  }
+  $("a.sb-link").each(function () {
+    var href = $(this).attr("href");
+    if (path === href) {
+      $(this).closest("a").parent().addClass("active-navlink");
+      $(this).closest("a").children().addClass("active-navlink-child");
+    }
+  });
+}
+setNavigation();
+
 $(".signup-alert").alert('close')  

@@ -133,41 +133,6 @@ body {
   width: 50vw;
 }
 
-/* Footer */
-footer {
-  height: 20vh;
-  background: #1f1f26;
-  border-top: 1px solid #a5a5a8;
-}
-.footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-#copyright {
-  text-align: center;
-  color: #a5a5a8;
-  margin-top: 2vh;
-  font-family: "Nunito", sans-serif;
-}
-.social-links {
-  margin-top: 1vh;
-  height: 10vh;
-  padding-top: 1vh;
-  text-align: center;
-}
-.social-link {
-  color: #fff;
-  font-size: 23px;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  border-radius: 100%;
-  text-align: center;
-}
-.social-link:hover {
-  color: #ee786c;
-}
-
-
 /* Sign Up */
 #sign-up-content {
   display: grid;
@@ -194,23 +159,23 @@ footer {
   border-radius: 45px !important;
 }
 
-.signup-alert{
+.signup-alert {
   border-radius: 3em;
   margin-bottom: 10px;
   height: 25px;
-  line-height:30px;
-  padding:0px 15px;
+  line-height: 30px;
+  padding: 0px 15px;
   padding-top: 4px;
-  background-color: #EE786C;
-  color:white;
+  background-color: #ee786c;
+  color: white;
   border: none;
   text-align: center;
-  font-size:0.8em;
+  font-size: 0.8em;
 }
 
-#alert-btn{
-  padding:0px;
-  padding-right: 13px
+#alert-btn {
+  padding: 0px;
+  padding-right: 13px;
 }
 
 /* Hide caret */
@@ -268,7 +233,342 @@ footer {
 .fc-btn {
   margin: 5vh 0vw !important;
 }
+/* Footer */
+footer {
+  height: 20vh;
+  background: #1f1f26;
+  border-top: 1px solid #a5a5a8;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#copyright {
+  text-align: center;
+  color: #a5a5a8;
+  margin-top: 2vh;
+  font-family: "Nunito", sans-serif;
+}
+.social-links {
+  margin-top: 1vh;
+  height: 10vh;
+  padding-top: 1vh;
+  text-align: center;
+}
+.social-link {
+  color: #fff;
+  font-size: 23px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 100%;
+  text-align: center;
+}
+.social-link:hover {
+  color: #ee786c;
+}
 
+/* EMPLOYEE */
+.emp-slide {
+  display: grid;
+  grid-template-columns: 6.5vw 93vw;
+}
+/* Sidebar */
+#custom-sidebar {
+  height: 100vh;
+  /* background: red; */
+  /* border-right: 1px solid #999; */
+}
+.profile-pic {
+  /* background: green; */
+  text-align: center;
+  margin-top: 3vh;
+}
+#profile-pic {
+  height: 37px;
+  /* background: red; */
+}
+#profile-name {
+  color: #fff;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  transition: 0.1s ease-in;
+  letter-spacing: 0.5px;
+}
+#profile-name:hover {
+  color: #ee786c;
+  font-weight: 400;
+}
+.sb-links {
+  text-align: center;
+  /* background: red; */
+}
+.sb-first-link {
+  margin-top: 4vh;
+}
+.sb-link > svg {
+  fill: #f4f7fc;
+  margin: 1.8vh 0;
+}
+#task-icon {
+  height: 30px;
+}
+#notes-icon {
+  height: 29px;
+}
+#signout-icon {
+  margin-top: 25vh;
+  margin-right: 10px;
+}
+#create-team {
+  height: 31px;
+}
+.sb-svg {
+  transition: 0.1s ease-in-out;
+}
+
+/* editing tool tips */
+.tooltip-inner {
+  background-color: #ee786c !important;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  padding: 7px;
+}
+/* arrow hide */
+.bs-tooltip-right .arrow::before,
+.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: rgba(255, 0, 0, 0) !important;
+}
+.active-navlink {
+  border-right: 5px solid #ee786c;
+}
+.active-navlink-child {
+  fill: #ee786c !important;
+}
+/* Dashboard slide emp */
+.main-content-emp {
+  height: 98vh;
+  margin-top: 1vh;
+  background: #f4f7fc;
+  border-radius: 15px 0 0 15px;
+  padding-top: 3vh;
+}
+.tab-top-nav {
+  /* background: red; */
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+  margin: 2vh 2vw;
+  margin-top: 0;
+}
+.tab-name {
+  /* background:red; */
+  font-family: "Nunito", sans-serif;
+  font-size: 27px;
+  color: #1f1f26;
+}
+.today-date {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 1vh;
+}
+.section-one {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+.msg-section {
+  margin: 1vh 2vw;
+  padding: 1vh 2vw;
+  background: #1f1f26;
+  border-radius: 15px;
+}
+.msg-one {
+  margin-bottom: 0;
+  padding-top: 6vh;
+  font-family: "Nunito", sans-serif;
+  color: #ee786c;
+}
+.msg-two {
+  margin-bottom: 1vh;
+  font-weight: 800;
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  color: #ee786c;
+  /* background: green; */
+}
+
+/* Tasks */
+.main-task-sec {
+  /* background: yellowgreen; */
+}
+.section-two {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.task-form-head {
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 1vh;
+}
+.task-form {
+  /* background: #000; */
+  width: 70vw !important;
+  margin: 3vh 0 3vh 2vw !important;
+  padding-bottom: 3vh;
+}
+.filter-tasks-btns {
+  /* background: red; */
+  height: 10vh;
+  padding-top: 3vh;
+  margin-bottom: 3vh;
+}
+.filter-btn {
+  padding: 1.4vh 2vw !important;
+  margin-right: 1vw;
+  font-family: "Open Sans", sans-serif;
+}
+.filter-btn:hover {
+  padding: 1.5vh 2vw !important;
+}
+.tasks-table {
+  overflow-y: auto;
+  height: 50vh;
+  border-radius: 15px 0 0 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.task-table-struc {
+  background: #fff !important;
+  border-radius: 15px 0 0 15px !important;
+}
+.tt-btn {
+  background: #ee786c !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  transition: 2s ease-in-out;
+}
+.tt-btn:hover {
+  box-shadow: px px rgba(9, 9, 9, 0.4) !important;
+}
+.right-side-tasks {
+  margin: 1vh 2px;
+  margin-bottom: 6vh;
+  border-radius: 15px;
+}
+.rs-top {
+  margin: 2vh 10px;
+  padding: 2vh 1vw;
+  border-radius: 15px;
+}
+.rs-top > h1 {
+  font-family: "Nunito", sans-serif;
+  display: inline;
+}
+.social-open-links {
+  background: greenyellow;
+}
+.so-link {
+  background: red;
+  margin: 2vh 1vw;
+}
+
+/* ============ RESPONSIVE ============= */
+/* 
+  320px — 480px: Mobile devices.
+  481px — 768px: iPads, Tablets.
+  769px — 1024px: Small screens, laptops.
+  1025px — 1200px: Desktops, large screens.
+  1201px and more — Extra large screens, TV.
+*/
+@media only screen and (max-width: 480px) {
+  /* Utilities classes */
+  .theme-button {
+    padding: 2vh 8vw !important;
+  }
+  .theme-button:hover {
+    padding: 2vh 8vw !important;
+  }
+
+  /* NAVBAR */
+  .navbar-brand {
+    margin-left: 1vw;
+    margin-top: 2vh;
+  }
+  .navbar-nav {
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50vw;
+    float: left;
+  }
+  .theme-button-clear {
+    background: transparent !important;
+    color: white !important;
+    border: none !important;
+    border-radius: none !important;
+  }
+  /* Hero Section */
+  #hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2vh 4vw;
+    margin: 3vh 3vw;
+  }
+  /* HS-Left */
+  .hsl-heads {
+    padding-top: 3vh !important;
+    padding-left: 0;
+    padding-bottom: 0.5vh;
+  }
+  .hsl-tittle {
+    font-size: 45px;
+  }
+  .hsl-text {
+    padding-left: 0;
+    font-size: 14px;
+    width: 92vw;
+  }
+  .hsl-links {
+    padding-left: 0;
+    margin-top: 7vh;
+  }
+  .hsl-link {
+    font-size: 14px;
+  }
+  #register-link {
+    margin-left: 5vw;
+    font-size: 14px;
+  }
+
+  /* HS-Right */
+  .hero-section-right {
+    display: none;
+  }
+  /* Sign up */
+  .alt-height {
+    height: auto !important;
+    padding-bottom: 5vh;
+  }
+  #sign-up-content {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 7vh;
+  }
+  .suc-right {
+    margin: 1vh 3vw;
+    margin-bottom: 4vh;
+  }
+  .theme-form {
+    width: 90vw;
+  }
+  .input-mb {
+    margin-bottom: 2vh !important;
+  }
+  /* Footer */
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer-brand {
+    text-align: center !important;
+  }
+}
 
 /* 
 COLORS
@@ -287,4 +587,3 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Reenie Beanie', cursive;
 */
-

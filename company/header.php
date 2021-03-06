@@ -1,5 +1,5 @@
 <?php 
-  include("server.php");
+  include("../server.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
     <!-- style css -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Up Process</title>
 </head>
 <body>

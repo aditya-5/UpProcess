@@ -1,5 +1,5 @@
 <?php 
-  include("server.php");
+  include("../server.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +11,12 @@
     <!-- Semantic -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../vendor/fontawesome/css/all.css">
     <!-- Font <Nunito and Open-sans>-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
     <!-- style css -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Up Process</title>
 </head>
 <body>
